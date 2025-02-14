@@ -10,13 +10,14 @@
   <div class="col-12 sm:col-6">
     <mat-card>
       <mat-card-content>
-        <div class="grid">
+        <form class="grid" [formGroup]="heroForm" (ngSubmit)="onSubmit()">
           <mat-form-field class="col-12 sm:col-6">
             <mat-label>Super héroe</mat-label>
             <input
               matInput
               type="text"
               required
+              formControlName="superhero"
               />
           </mat-form-field>
           <mat-form-field class="col-12 sm:col-6">
@@ -25,6 +26,7 @@
               matInput
               type="text"
               required
+              formControlName="alter_ego"
               />
           </mat-form-field>
           <mat-form-field class="col-12">
@@ -33,11 +35,14 @@
               matInput
               type="text"
               required
+              formControlName="first_appearance"
               />
           </mat-form-field>
           <mat-form-field class="col-12">
             <mat-label>Creador</mat-label>
-            <mat-select required="">
+            <mat-select
+              formControlName="superhero"
+              required>
                 <mat-option *ngFor="let publisher of publishers"
                   [value]="publisher.id">
                   {{publisher.desc}}
@@ -45,21 +50,23 @@
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-12">
-            <mat-label>Primera aparición</mat-label>
+            <mat-label>Alternative Image</mat-label>
             <input
               matInput
               type="text"
-              required
+              formControlName="alt_img"
               />
           </mat-form-field>
-        </div>
+        </form>
         <div class="flex justify-content-between">
           <button mat-flat-button
           color="primary">
           Borrar
           </button>
           <button mat-flat-button
-            color="primary">
+            color="primary"
+            (click)="onSubmit()"
+            >
             <mat-icon>save</mat-icon>
             Guardar
           </button>
