@@ -21,7 +21,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": "https://www.yourdecoration.es/cdn/shop/files/abystyle-abydco754-dc-comics-superman-poster-61x91-5cm_500x.jpg?v=1721810601"
     },
     {
       "id": "dc-flash",
@@ -292,6 +293,15 @@
       "first_appearance": "Comic Udemy 2015",
       "characters": "",
       "alt_img": "https://media.revistagq.com/photos/65801b7d4260d71797b69845/16:9/w_1920,c_limit/IMG_0240.jpeg"
+    },
+    {
+      "id": "LMtH5CO",
+      "superhero": "DC Comics",
+      "publisher": "DC Comics",
+      "alter_ego": "sdfsdf",
+      "first_appearance": "sdfsdf",
+      "characters": "",
+      "alt_img": "https://static.wikia.nocookie.net/doblaje/images/c/c4/WonderWomanDCCOmics02.jpg/revision/latest?cb=20241028023601&path-prefix=es"
     }
   ]
 }
