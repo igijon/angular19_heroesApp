@@ -27,8 +27,8 @@ export class AuthService {
       );
   }
 
-  checkAuthentication(): Observable<boolean> | boolean {
-    if(!localStorage.getItem('token')) return false;
+  checkAuthentication(): Observable<boolean> {
+    if(!localStorage.getItem('token')) return of(false);
     const token = localStorage.getItem('token');
     return this.http.get<User>(`${this.baseUrl}/users/1`)
       .pipe(
